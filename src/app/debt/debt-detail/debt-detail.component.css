@@ -1,0 +1,28 @@
+.debt-detail-wrapper h2 {
+	text-align: center;
+}
+
+.debt-detail-wrapper .debt-detail-list-wrapper {
+	padding:0 25%;
+	display: flex;
+}
+
+.debt-detail-wrapper .row:nth-child(odd) {
+    background-color: #ccc;
+}
+
+.debt-detail-wrapper .right-side {
+    min-width: 50%;
+}
+
+.debt-detail-wrapper .row {
+    padding: 10px;
+}
+
+.debt-detail-wrapper .left-side .row {
+    border-right: 1px solid #555;
+}
+
+.debt-detail-wrapper .right-side .row {
+    text-align: center;
+}

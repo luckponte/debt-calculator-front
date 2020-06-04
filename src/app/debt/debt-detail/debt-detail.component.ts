@@ -9,7 +9,7 @@ import { Debt } from '../../debt.type';
 export class DebtDetailComponent implements OnInit {
   constructor() { }
 
-  @Input() debt:any;
+  @Input() debt:Debt;
 
   ngOnInit(): void {
   }

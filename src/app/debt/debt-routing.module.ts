@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { DebtComponent } from './debt.component'
 
 const routes: Routes = [{
-	path: 'divida',
-	loadChildren: () => import('./debt/debt.module').then(m => m.DebtModule)
+	path: '',
+	component: DebtComponent
 }];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class DebtRoutingModule { }
+

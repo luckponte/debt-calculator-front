@@ -4,5 +4,6 @@ export interface Debt {
 	debtValue:number,
 	interestValue:number,
 	finalValue:number,
-	phone:string
+	phone:string,
+	maxParcels:number
 }

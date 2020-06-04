@@ -1,1 +1,17 @@
-<p>debt-detail works!</p>
+<div class="debt-detail-wrapper">
+	<div class="left-side">
+		<div class="row">Data de Vencimento:</div>	
+		<div class="row">Valor Original:</div>	
+		<div class="row">Valor de Juros:</div>	
+		<div class="row">Valor Final:</div>	
+		<div class="row">Entre em contato para negociar sua dívida:</div>	
+	</div>
+
+	<div class="right-side">
+		<div class="row">{{debt.deadlineDate}}</div>
+		<div class="row">{{debt.debtValue}}</div>
+		<div class="row">{{debt.interestValue}}</div>
+		<div class="row">{{debt.finalValue}}</div>
+		<div class="row">{{debt.phone}}</div>
+	</div>
+</div>

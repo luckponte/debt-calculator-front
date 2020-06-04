@@ -1,1 +1,4 @@
-<p>debt-card works!</p>
+<div class="debt-card-wrapper">
+	<p>{{debt.deadlineDate | date:'dd/MM/yyyy'}}</p>
+	<p>{{debt.finalValue | currency:'BRL':undefined:undefined:'pt'}}</p>
+</div>

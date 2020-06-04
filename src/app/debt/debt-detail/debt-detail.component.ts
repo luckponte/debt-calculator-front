@@ -35,7 +35,5 @@ export class DebtDetailComponent implements OnInit
   		};
   		
   	}
-
-  	console.log('[dept-detail.component.ts] parcels: ',this.parcels);
   }
 }

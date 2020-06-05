@@ -1,11 +1,13 @@
 <div class="debt-wrapper">
 	<h2>Suas Dívidas</h2>
 
-	<div class="debt-list-wrapper">
-		<app-debt-card [debt]="debts[0]"></app-debt-card>
-		<app-debt-card [debt]="debts[1]"></app-debt-card>
-		<app-debt-card [debt]="debts[2]"></app-debt-card>
+	<span [hidden]="!showDetail" (click)="deselectDebt()">Voltar</span>
+
+	<div [hidden]="showDetail" class="debt-list-wrapper">
+		<app-debt-card [debt]="debts[0]" (click)="selectDebt(0)"></app-debt-card>
+		<app-debt-card [debt]="debts[1]" (click)="selectDebt(1)"></app-debt-card>
+		<app-debt-card [debt]="debts[2]" (click)="selectDebt(2)"></app-debt-card>
 	</div>
 	
-	<!-- <app-debt-detail [debt]="debts[0]"></app-debt-detail> -->
+	<app-debt-detail *ngIf="detailDebt" [hidden]="!showDetail" [debt]="detailDebt"></app-debt-detail>
 </div>

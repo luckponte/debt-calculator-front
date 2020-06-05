@@ -35,8 +35,21 @@ export class DebtComponent implements OnInit {
   	phone:'string',
   	maxParcels:3
   }];
+	showDetail:boolean=false;
+	detailDebt:Debt;
 
-  ngOnInit(): void {
+  ngOnInit(): void{
   }
 
+	selectDebt(idx)
+	{
+		this.detailDebt = this.debts[idx];
+		this.showDetail = true;
+	}
+
+	deselectDebt()
+	{
+		this.detailDebt = null;
+		this.showDetail = false;
+	}
 }

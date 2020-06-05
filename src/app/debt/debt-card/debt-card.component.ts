@@ -24,4 +24,27 @@ export class DebtCardComponent implements OnInit
 	else if(timeDifference < 604800000) //Se está a uma semana de vencer, estado de alerta
 		this.status = 1;
   }
+
+  translateStatus(status)
+  {
+  	let translated = '';
+
+  	switch (status) {
+  		case 0:
+  			translated = 'Ok'
+  			break;
+  		case 1:
+  			translated = 'Próximo do vencimento'
+  			break;
+  		case 2:
+  			translated = 'Atrasado'
+  			break;
+  		
+  		default:
+  			translated = 'Ok'
+  			break;
+  	}
+
+  	return translated;
+  }
 }

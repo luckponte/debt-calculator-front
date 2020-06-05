@@ -6,26 +6,44 @@
 	max-width: 25%;
 }
 
-.debt-card-wrapper .status {
+.debt-card-wrapper .status-sleeve {
 	border-radius: 15px 0 0 15px;
-	width:10px;
+	width:20px;
 }
 
-.debt-card-wrapper .late{
+.debt-card-wrapper .status-sleeve.late{
 	background-color: #ef476f;
 	box-shadow: -2px 3px 8px -1px #ef476f;
 }
 
-.debt-card-wrapper .attention{
+.debt-card-wrapper .status-sleeve.attention{
 	background-color: #ffd166;
 	box-shadow: -2px 3px 8px -1px #ffd166;
 }
 
-.debt-card-wrapper .ok{
+.debt-card-wrapper .status-sleeve.ok{
 	background-color: #118ab2;
 	box-shadow: -2px 3px 8px -1px #118ab2;
 }
 
 .debt-card-wrapper .content {
 	padding: 10px;
+}
+
+.debt-card-wrapper .status {
+	margin: auto 10px;
+	font-size:1.2rem;
+	font-weight: bold;
+}
+
+.debt-card-wrapper .status.late {
+	color: #BC1038;
+}
+
+.debt-card-wrapper .status.attention {
+	color: #F5AB00;
+}
+
+.debt-card-wrapper .status.ok {
+	color: #09485D;
 }

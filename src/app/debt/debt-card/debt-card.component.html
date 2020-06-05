@@ -1,4 +1,8 @@
 <div class="debt-card-wrapper">
-	<p>{{debt.deadlineDate | date:'dd/MM/yyyy'}}</p>
-	<p>{{debt.finalValue | currency:'BRL':undefined:undefined:'pt'}}</p>
+	<div class="status" [ngClass]="{'late':status===2, 'attention':status===1, 'ok':!status}">{{status}}</div>
+
+	<div>
+		<p>{{debt.deadlineDate | date:'dd/MM/yyyy'}}</p>
+		<p>{{debt.finalValue | currency:'BRL':undefined:undefined:'pt'}}</p>
+	</div>
 </div>

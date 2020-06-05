@@ -3,7 +3,9 @@
 	display: flex;
 	box-shadow: 10px 8px 5px -3px #ccc;
 	border-radius: 5% 0 0 5%;
-	max-width: 25%;
+	width:20vw;
+	border: solid 1px #ddd;
+	border-radius: 15px 0 0 15px
 }
 
 .debt-card-wrapper .status-sleeve {
@@ -27,13 +29,19 @@
 }
 
 .debt-card-wrapper .content {
+	background-color: #fff;
 	padding: 10px;
 }
 
 .debt-card-wrapper .status {
-	margin: auto 10px;
+	background-color: #fff;
+	width: 100%;
 	font-size:1.2rem;
 	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
 }
 
 .debt-card-wrapper .status.late {

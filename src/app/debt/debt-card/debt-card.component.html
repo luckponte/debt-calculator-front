@@ -1,4 +1,4 @@
-<div class="debt-card-wrapper">
+<div class="debt-card-wrapper" [ngClass]="{'late':status===2, 'attention':status===1, 'ok':!status}">
 	<div class="status-sleeve" [ngClass]="{'late':status===2, 'attention':status===1, 'ok':!status}">&nbsp;</div>
 
 	<div class="content">
@@ -6,5 +6,7 @@
 		<p>{{debt.finalValue | currency:'BRL':undefined:undefined:'pt'}}</p>
 	</div>
 
-	<div class="status" [ngClass]="{'late':status===2, 'attention':status===1, 'ok':!status}">{{translateStatus(status)}}</div>
+	<div class="status" [ngClass]="{'late':status===2, 'attention':status===1, 'ok':!status}">
+		<span>{{translateStatus(status)}}</span>
+	</div>
 </div>

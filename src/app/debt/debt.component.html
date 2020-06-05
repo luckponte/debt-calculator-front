@@ -1,1 +1,11 @@
-<p>debt works!</p>
+<div class="debt-wrapper">
+	<h2>Suas Dívidas</h2>
+
+	<div class="debt-list-wrapper">
+		<app-debt-card [debt]="debts[0]"></app-debt-card>
+		<app-debt-card [debt]="debts[1]"></app-debt-card>
+		<app-debt-card [debt]="debts[2]"></app-debt-card>
+	</div>
+	
+	<!-- <app-debt-detail [debt]="debts[0]"></app-debt-detail> -->
+</div>

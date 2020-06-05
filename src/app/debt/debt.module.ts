@@ -4,15 +4,14 @@ import { DebtRoutingModule } from './debt-routing.module';
 import { DebtComponent } from './debt.component';
 import { DebtCardComponent } from './debt-card/debt-card.component';
 import { DebtDetailComponent } from './debt-detail/debt-detail.component';
-import { DebtListComponent } from './debt-list/debt-list.component';
 
 @NgModule({
-  declarations: [DebtComponent, DebtCardComponent, DebtDetailComponent, DebtListComponent],
+  declarations: [DebtComponent, DebtCardComponent, DebtDetailComponent],
   imports: [
     CommonModule,
     DebtRoutingModule
   ],
-  exports:[DebtComponent, DebtCardComponent, DebtDetailComponent, DebtListComponent],
+  exports:[DebtComponent, DebtCardComponent, DebtDetailComponent],
   bootstrap: [DebtComponent]
 })
 export class DebtModule { }

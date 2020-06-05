@@ -1,5 +1,6 @@
 .debt-wrapper h2 {
-	margin-left: 20px;
+	/* margin-left: 20px; */
+	text-align: center;
 }
 
 .debt-wrapper .debt-list-wrapper {
@@ -13,4 +14,6 @@
 	padding: 20px;
 	justify-content: space-between;
 	background-color: #fdfdfd;
+	max-height: 80vh;
+	overflow-y: auto;
 }

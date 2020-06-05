@@ -1,11 +1,20 @@
 .debt-detail-wrapper table {
-	border-collapse: collapse;
-	margin: auto;
-	border: solid 1px #ccc;
+	border-spacing: 0;
+	margin: 10px auto 20px;
+	border: solid 1px #aaa;
+	border-radius: 10px;
 }
 
 .debt-detail-wrapper table, tr, td, th {
 	padding: 10px;
+}
+
+.debt-detail-wrapper table tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+.debt-detail-wrapper table tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
 }
 
 .debt-detail-wrapper th {

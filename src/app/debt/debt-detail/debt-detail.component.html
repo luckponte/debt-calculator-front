@@ -1,43 +1,39 @@
 <div class="debt-detail-wrapper">
-	<h2>Sua dívida</h2>
+	<table>
+		<tbody>
+			<tr class="row">
+				<th>Data de Vencimento:</th>
+				<td>{{debt.deadlineDate | date:'dd/MM/yyyy'}}</td>
+			</tr>
+			<tr class="row">
+				<th>Dias em Atraso:</th>
+				<td>{{dueDays}}</td>
+			</tr>
+			<tr class="row">
+				<th>Valor Original:</th>
+				<td>{{debt.debtValue | currency:'BRL':'symbol':undefined:'pt'}}</td>
+			</tr>
+			<tr class="row">
+				<th>Valor de Juros:</th>
+				<td>{{debt.interestValue | currency:'BRL':'symbol':undefined:'pt'}}</td>
+			</tr>
+			<tr class="row">
+				<th>Valor Final:</th>
+				<td>{{debt.finalValue | currency:'BRL':'symbol':undefined:'pt'}}</td>
+			</tr>
+			<tr class="row" *ngIf="parcels && parcels.length > 0">
+				<th>Valor Final de Cada Parcela:</th>
 
-	<div class="debt-detail-list-wrapper">
-		<table>
-			<tbody>
-				<tr class="row">
-					<th>Data de Vencimento:</th>
-					<td>{{debt.deadlineDate | date:'dd/MM/yyyy'}}</td>
-				</tr>
-				<tr class="row">
-					<th>Dias em Atraso:</th>
-					<td>{{dueDays}}</td>
-				</tr>
-				<tr class="row">
-					<th>Valor Original:</th>
-					<td>{{debt.debtValue | currency:'BRL':'symbol':undefined:'pt'}}</td>
-				</tr>
-				<tr class="row">
-					<th>Valor de Juros:</th>
-					<td>{{debt.interestValue | currency:'BRL':'symbol':undefined:'pt'}}</td>
-				</tr>
-				<tr class="row">
-					<th>Valor Final:</th>
-					<td>{{debt.finalValue | currency:'BRL':'symbol':undefined:'pt'}}</td>
-				</tr>
-				<tr class="row" *ngIf="parcels && parcels.length > 0">
-					<th>Valor Final de Cada Parcela:</th>
-
-					<td>
-						<div class="row" *ngFor="let parcel of parcels">
-							{{parcel.dueDate | date:'dd/MM/yyyy'}}: {{parcel.value | currency:'BRL':'symbol':undefined:'pt'}}
-						</div>
-					</td>
-				</tr>
-				<tr class="row">
-					<th>Entre em contato para negociar sua dívida:</th>
-					<td>{{debt.phone}}</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+				<td>
+					<div class="row" *ngFor="let parcel of parcels">
+						{{parcel.dueDate | date:'dd/MM/yyyy'}}: {{parcel.value | currency:'BRL':'symbol':undefined:'pt'}}
+					</div>
+				</td>
+			</tr>
+			<tr class="row">
+				<th>Entre em contato para negociar sua dívida:</th>
+				<td>{{debt.phone}}</td>
+			</tr>
+		</tbody>
+	</table>
 </div>

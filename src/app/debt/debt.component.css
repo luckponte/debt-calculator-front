@@ -3,19 +3,39 @@
 	text-align: center;
 }
 
-.debt-wrapper .debt-list-wrapper {
+.debt-wrapper .debt-content-wrapper {
 	display: flex;
-	flex-wrap: wrap;
 	width: 50%;
 	margin: auto;
 	border: solid 1px #ccc;
 	border-radius: 15px;
 	box-shadow: 4px 6px 8px 2px #ccc;
 	padding: 20px;
-	justify-content: space-between;
 	background-color: #fdfdfd;
 	max-height: 80vh;
 	overflow-y: auto;
+	flex-wrap: wrap;
+}
+
+.debt-wrapper .debt-content-wrapper.list {
+	justify-content: space-between;
+}
+
+.debt-wrapper .debt-content-wrapper.detail {
+	justify-content: center;
+	flex-direction: column;
+	align-content: center;
+}
+
+.debt-wrapper .debt-content-wrapper.detail span {
+	font-weight: 600;
+	font-size: 1.2rem;
+	cursor: pointer;
+	margin: 20px 0 10px;
+}
+
+.debt-wrapper .debt-content-wrapper.detail span:hover {
+	color: #666;
 }
 
 [hidden] {

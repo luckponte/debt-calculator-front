@@ -1,0 +1,31 @@
+.debt-card-wrapper {
+	margin: 20px;
+	display: flex;
+	box-shadow: 10px 8px 5px -3px #ccc;
+	border-radius: 5% 0 0 5%;
+	max-width: 25%;
+}
+
+.debt-card-wrapper .status {
+	border-radius: 15px 0 0 15px;
+	width:10px;
+}
+
+.debt-card-wrapper .late{
+	background-color: #ef476f;
+	box-shadow: -2px 3px 8px -1px #ef476f;
+}
+
+.debt-card-wrapper .attention{
+	background-color: #ffd166;
+	box-shadow: -2px 3px 8px -1px #ffd166;
+}
+
+.debt-card-wrapper .ok{
+	background-color: #118ab2;
+	box-shadow: -2px 3px 8px -1px #118ab2;
+}
+
+.debt-card-wrapper .content {
+	padding: 10px;
+}

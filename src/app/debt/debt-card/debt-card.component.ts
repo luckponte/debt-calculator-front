@@ -23,7 +23,5 @@ export class DebtCardComponent implements OnInit
 		this.status = 2;
 	else if(timeDifference < 604800000) //Se está a uma semana de vencer, estado de alerta
 		this.status = 1;
-
-	console.log('timeDifference',timeDifference);
   }
 }

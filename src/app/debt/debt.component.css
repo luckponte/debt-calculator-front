@@ -1,3 +1,8 @@
+.debt-wrapper p {
+	margin-left: 12.5%;
+	margin-right: 12.5%;
+}
+
 .debt-wrapper h2 {
 	/* margin-left: 20px; */
 	text-align: center;

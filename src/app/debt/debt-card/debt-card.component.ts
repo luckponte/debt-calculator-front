@@ -15,7 +15,6 @@ export class DebtCardComponent implements OnInit
 
   ngOnInit(): void
   {
-
   	let today = new Date(),
   		timeDifference = this.debt.deadlineDate - today.getTime();
 

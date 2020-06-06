@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DebtService } from "./debt.service";
 import { Debt } from '../debt.type';
 
 @Component({
@@ -6,39 +7,21 @@ import { Debt } from '../debt.type';
   templateUrl: './debt.component.html',
   styleUrls: ['./debt.component.css']
 })
-export class DebtComponent implements OnInit {
+export class DebtComponent implements OnInit
+{
+  constructor(private debtService:DebtService) { }
 
-  constructor() { }
-
-  debts:Array<Debt> = [{
-  	id: 0,
-  	deadlineDate:1591659607000,
-  	debtValue:1000,
-  	interestValue:20,
-  	finalValue:1020,
-  	phone:'string',
-  	maxParcels:3
-  },{
-  	id: 1,
-  	deadlineDate:1591054807000,
-  	debtValue:2000,
-  	interestValue:40,
-  	finalValue:2040,
-  	phone:'string',
-  	maxParcels:3
-  },{
-  	id: 2,
-  	deadlineDate:1592264407000,
-  	debtValue:3000,
-  	interestValue:60,
-  	finalValue:3060,
-  	phone:'string',
-  	maxParcels:3
-  }];
+  debts:Array<Debt>;
 	showDetail:boolean=false;
 	detailDebt:Debt;
 
-  ngOnInit(): void{
+	ngOnInit(): void
+	{
+		this.debtService.getDebts().toPromise().then((debts)=>{
+			this.debts = debts;
+		}).catch((err)=>{
+			console.error("[debt.component.ts] Error: ", err);
+		});
   }
 
 	selectDebt(idx)

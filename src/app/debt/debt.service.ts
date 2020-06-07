@@ -9,10 +9,10 @@ import { Debt } from '../debt.type';
 export class DebtService {
 
   constructor(private http:HttpClient) { }
-  private apiURL = "http://www.mocky.io/v2/5edbf7ed320000bd7a5d2855";
+  private apiURL = "https://localhost:5001/api/";
 
   getDebts():Observable<Debt[]>
   {
-    return this.http.get<Debt[]>(this.apiURL);
+    return this.http.get<Debt[]>(this.apiURL+'Debts/1');
   }
 }

@@ -6,12 +6,14 @@ import localePt from '@angular/common/locales/pt'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ConfigurationComponent } from './configuration/configuration.component';
 
 registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ConfigurationComponent
   ],
   imports: [
     BrowserModule,

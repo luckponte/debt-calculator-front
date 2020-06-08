@@ -4,3 +4,35 @@
 	padding: 20px 40px;
 	/*height: 100vh;*/
 }
+
+.menu {
+	background: #ccc;
+	color: #222;
+	height: 7.5vh;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	padding: 10px;
+	display: flex;
+	align-content: center;
+}
+
+.menu .menuLink {
+    color: #444;
+    background: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    margin: auto 20px;
+    border-radius: 5px;
+    border: solid 1px #aaa;
+}
+
+.menu .menuLink:hover {
+    box-shadow: 1px 1px 5px 0px #222;
+}
+
+.outlet {
+	margin-top: 10vh;
+}

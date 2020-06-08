@@ -1,4 +1,5 @@
 <div class="configuration-wrapper">
+    <h2>Configurações</h2>
     <div class="configuration-form" *ngIf="configs">
         <label for="maxParcels">Número de Parcelas: 
             <input [ngClass]="{'error':error.maxParcels}" type="number" name="maxParcels" [value]="configs.maxParcels" (input)="configs.maxParcels = $event.target.value" />

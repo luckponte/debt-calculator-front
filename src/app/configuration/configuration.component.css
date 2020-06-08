@@ -1,3 +1,50 @@
+.configuration-wrapper h2 {
+    text-align: center;
+}
+
+.configuration-wrapper .configuration-form {
+    display: flex;
+	width: 50%;
+	margin: auto;
+	border: solid 1px #ccc;
+	border-radius: 15px;
+	box-shadow: 4px 6px 8px 2px #ccc;
+	padding: 20px;
+	background-color: #fdfdfd;
+    height: 50vh;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.configuration-wrapper .configuration-form label {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.configuration-wrapper .configuration-form button {
+    width: 20%;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1.12rem;
+    color: #444;
+    background: #fff;
+    border: solid 1px #ccc;
+    cursor: pointer;
+}
+
+.configuration-wrapper .configuration-form button:hover {
+    box-shadow: 1px 1px 6px 1px #ccc;
+}
+
+input {
+    border-radius: 5px;
+    border: solid 1px #ccc;
+    padding: 7.5px;
+    color: #444;
+}
+
 .configuration-wrapper .error {
-    border: solid 1px red;
+    border: solid 1px rgb(170, 19, 19);
 }

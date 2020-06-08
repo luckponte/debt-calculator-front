@@ -5,11 +5,16 @@ const routes: Routes = [{
 	path: 'divida',
 	loadChildren: () => import('./debt/debt.module').then(m => m.DebtModule)
 },{
-  path: '',
-  loadChildren: () => import('./debt/debt.module').then(m => m.DebtModule)
-},{
   path: 'config',
   loadChildren: () => import('./configuration/configuration.module').then(m => m.ConfigurationModule)
+},{
+  path: '',
+  redirectTo: '/divida',
+  pathMatch: 'full'
+},{
+  path: '**',
+  redirectTo: '/divida',
+  pathMatch: 'full'
 }];
 
 @NgModule({

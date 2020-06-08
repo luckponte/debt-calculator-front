@@ -1,7 +1,7 @@
 <div class="app">
 	<div class="menu">
-		<a class="menuLink" [routerLink]="['/divida']">Ver Dívidas</a>
-		<a class="menuLink" [routerLink]="['/config']">Configurações</a>
+		<a routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: false}" class="menuLink" [routerLink]="['/divida']">Ver Dívidas</a>
+		<a routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: false}" class="menuLink" [routerLink]="['/config']">Configurações</a>
 	</div>
 
 	<div class="outlet">

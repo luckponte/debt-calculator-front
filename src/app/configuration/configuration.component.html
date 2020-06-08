@@ -1,15 +1,15 @@
 <div class="configuration-wrapper">
     <div class="configuration-form" *ngIf="configs">
         <label for="maxParcels">Número de Parcelas: 
-            <input type="number" name="maxParcels" [value]="configs.maxParcels" (input)="configs.maxParcels = $event.target.value" />
+            <input [ngClass]="{'error':error.maxParcels}" type="number" name="maxParcels" [value]="configs.maxParcels" (input)="configs.maxParcels = $event.target.value" />
         </label>
 
         <label for="comission">Porcentagem da comissão: 
-            <input type="number" name="comission" [value]="configs.comission * 100" (input)="configs.comission = $event.target.value/100" />
+            <input [ngClass]="{'error':error.comission}" type="number" name="comission" [value]="configs.comission * 100" (input)="configs.comission = $event.target.value/100" />
         </label>
         
         <label for="interestRate">Taxa de juros (ao dia): 
-            <input type="number" name="interestRate" [value]="configs.interestRate * 100" (input)="configs.interestRate = $event.target.value/100" />
+            <input [ngClass]="{'error':error.interestRate}" type="number" name="interestRate" [value]="configs.interestRate * 100" (input)="configs.interestRate = $event.target.value/100" />
         </label>
 
         <button (click)="validateData()">Salvar</button>
